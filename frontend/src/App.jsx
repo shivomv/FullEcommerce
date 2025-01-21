@@ -1,8 +1,11 @@
 import React from 'react'
+import { Typography, Box } from '@mui/material'
 
 const App = () => {
   return (
-    <div>App</div>
+    <Box>
+      <Typography color="succed">App</Typography>
+    </Box>
   )
 }
 
