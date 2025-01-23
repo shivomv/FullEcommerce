@@ -7,11 +7,8 @@
   --text-white: #fff;
   --border-color: rgba(0, 0, 0, 0.1);
   --font-size-base: 14px;
-  /* Base font size */
   --font-size-small: 12px;
-  /* Small font size */
   --font-size-large: 16px;
-  /* Large font size */
 }
 
 * {
@@ -27,6 +24,7 @@ body {
 
 .container {
   max-width: 90% !important;
+  margin: 0 auto !important;
 }
 
 .bg-purple {
@@ -44,38 +42,30 @@ body {
   }
 
   .header {
-    padding: 10px 0;
-    /* Reduced padding for a more compact header */
+    padding: 25px 0;
+    width: 100%;
   }
 }
 
-.logoWrapper {
-  img {
-    width: 80%;
-    /* Adjusted width for better responsiveness */
-  }
+.logoWrapper img {
+  width: 80%;
 }
 
 .countryDropdown {
   width: 150px;
-  /* Reduced width for a more compact dropdown */
   height: 40px;
-  /* Reduced height for a more compact dropdown */
   text-align: left;
   justify-content: flex-start !important;
   color: var(--text-color) !important;
   border: 1px solid var(--border-color) !important;
   border-radius: 5px !important;
-  /* Reduced border radius for a sleeker look */
   padding: 8px 12px !important;
-  /* Adjusted padding for a more compact appearance */
 
   .label {
     font-size: var(--font-size-small) !important;
     text-transform: capitalize;
     color: var(--text-light-color) !important;
     line-height: 14px;
-    /* Adjusted line height for better spacing */
   }
 
   .name {
@@ -83,59 +73,43 @@ body {
     text-transform: capitalize;
     color: var(--primary-color) !important;
     font-weight: 600;
-    /* Adjusted font weight for a lighter appearance */
     line-height: 14px;
-    /* Adjusted line height for better spacing */
   }
 
-  span.ml-auto {
-    svg {
-      opacity: 0.7;
-    }
+  span.ml-auto svg {
+    opacity: 0.7;
   }
 }
 
-header {
-  .headerSearch {
-    width: 50%;
-    /* Reduced width for a more compact search bar */
-    height: 40px;
-    /* Reduced height for a more compact search bar */
-    background: #f3f4f7;
-    padding: 3px 10px;
-    /* Adjusted padding for a more compact appearance */
-    border-radius: 5px;
-    /* Reduced border radius for a sleeker look */
-    position: relative;
-    border: 1px solid var(--border-color);
+header .headerSearch {
+  width: 90%;
+  height: 40px;
+  background: #f3f4f7;
+  padding: 3px 10px;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid var(--border-color);
 
-    input {
-      background: transparent !important;
-      outline: none !important;
-      font-size: var(--font-size-base);
-      /* Adjusted font size for better readability */
-      color: rgba(0, 0, 0, 0.8);
-      width: 100%;
-      height: 30px;
-      border: none !important;
-      padding: 0 5px !important;
-      /* Adjusted padding for a more compact appearance */
-    }
+  input {
+    background: transparent !important;
+    outline: none !important;
+    font-size: var(--font-size-base);
+    color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 30px;
+    border: none !important;
+    padding: 0 5px !important;
+  }
 
-    button {
-      position: absolute;
-      right: 10px;
-      /* Adjusted position for better alignment */
-      z-index: 100;
-      min-width: 35px;
-      /* Reduced minimum width for a more compact button */
-      height: 35px;
-      /* Reduced height for a more compact button */
-      border-radius: 50%;
-      color: var(--text-color);
-      font-size: 20px;
-      /* Reduced font size for a more compact button */
-    }
+  button {
+    position: absolute;
+    right: 10px;
+    z-index: 100;
+    min-width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: var(--text-color);
+    font-size: 20px;
   }
 }
 
@@ -144,19 +118,17 @@ header {
     align-items: center;
     justify-content: center;
     min-width: 35px !important;
-    /* Set minimum width for a consistent circular icon */
     height: 35px !important;
-    /* Set height for a consistent circular icon */
     border-radius: 50% !important;
     border: 1px solid var(--border-color) !important;
-
   }
 
   .userIcon {
+    background-color: #fff !important;
+
     svg {
       font-size: var(--font-size-large) !important;
       color: var(--text-color) !important;
-      /* Reduced font size for a more compact icon */
     }
   }
 
@@ -166,26 +138,23 @@ header {
     font-weight: 700;
   }
 
-  .cartTab {
-    .cartIconWrapper {
-      .cartCount {
-        position: absolute;
-        top: -2px;
-        right: -2px;
-        background-color: #ff0000;
-        color: #fff;
-        border-radius: 50%;
-        width: 15px;
-        height: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: var(--font-size-small);
-      }
+  .cartTab .cartIconWrapper {
+    position: relative !important;
 
-      position: relative !important;
+    .cartCount {
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      background-color: #ff0000;
+      color: #fff;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--font-size-small);
     }
-
   }
 
   button {
@@ -193,9 +162,56 @@ header {
     background-color: #ffd4ce !important;
     font-size: var(--font-size-large) !important;
 
-
     svg {
       color: #ea2b0f !important;
     }
+  }
+}
+
+nav .allCatTab {
+  background-color: #2bbef9;
+  border-radius: 30px !important;
+  padding: 8px 30px !important;
+
+  * {
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: #2bbef9;
+  }
+
+  .icon1 svg {
+    font-size: 20px !important;
+  }
+
+  .icon2 svg {
+    font-size: 15px !important;
+  }
+}
+
+nav .navPart2 ul {
+  margin-bottom: 0 !important;
+
+  li a {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    color: rgba(0, 0, 0, 0.7) !important;
+    text-transform: uppercase !important;
+    display: flex;
+    align-items: center;
+    padding: 8px 15px !important;
+    transition: 0.2s ease-in-out !important;
+    border-radius: 30px !important;
+
+    &:hover {
+      color: #2bbef9 !important;
+      background-color: #f0faff !important;
+    }
+  }
+
+  li svg {
+    font-size: 20px !important;
   }
 }

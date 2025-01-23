@@ -6,6 +6,7 @@ import CountryDropdown from '../CountryDropdown/CountryDropdown'
 import { FiUser } from 'react-icons/fi'
 import { IoBagOutline } from 'react-icons/io5'
 import SearchBar from './SearchBar/SearchBar'
+import Navigation from './Navigation/Navigation'
 
 const Headers = () => {
     return (
@@ -26,19 +27,21 @@ const Headers = () => {
                                 <img src={logo} alt="logo" />
                             </Link>
                         </div>
-                        <div className="col-sm-10 d-flex align-items-center part2">
+                        <div className="col-sm-8 d-flex align-items-center part2 m-auto">
                             <CountryDropdown />
 
                             {/* Header serach start */}
                             <SearchBar />
                             {/* Header serach end */}
 
-                            <div className="headerCart d-flex align-items-center part3 m-auto">
+                        </div>
+                        <div className='col-sm-2'>
+                            <div className="headerCart d-flex align-items-end part3 m-auto">
                                 <Button className='userIcon circle'>
                                     <FiUser />
                                 </Button>
                                 <div className="cartTab ml-auto d-flex align-items-center">
-                                    <span className='cartPrice ms-3 me-1'>₹500</span>
+                                    <span className='cartPrice ms-4 me-2'>₹500</span>
                                     <div className=' ml-2 cartIconWrapper'>
                                         <Button className='cartIcon circle'>
                                             <IoBagOutline />
@@ -51,6 +54,8 @@ const Headers = () => {
                     </div>
                 </div>
             </header>
+
+            <Navigation />
         </div>
     )
 }
