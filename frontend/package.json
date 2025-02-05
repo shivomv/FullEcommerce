@@ -14,6 +14,8 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.1",
     "@mui/material": "^6.4.1",
+    "@vercel/speed-insights": "^1.1.0",
+    "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
     "core-js": "^3.40.0",
     "prop-types": "^15.8.1",
