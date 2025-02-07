@@ -201,12 +201,12 @@ nav .navPart1 .catWrapper .sideBarNav {
   padding: 0;
 }
 
-.sideBarNav>ul>li {
+.sideBarNav > ul > li {
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  li{
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
+  li {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   a {
@@ -220,11 +220,10 @@ nav .navPart1 .catWrapper .sideBarNav {
     padding: 8px 13px;
     transition: 0.2s ease-in-out;
     border-radius: 30px;
-    
   }
 }
 
-.sideBarNav>ul>li>a {
+.sideBarNav > ul > li > a {
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
@@ -237,27 +236,34 @@ nav .navPart1 .catWrapper .sideBarNav {
   border-radius: 30px;
 }
 
+.sideBarNav > ul > li:hover {
+  a {
+    color: #2bbef9;
+  }
 
+  background-color: #f0faff;
 
-.sideBarNav>ul>li:hover>ul {
-  display: block;
-  transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  /* Updated transition properties */
-  left: 105%;
-  opacity: 1;
-  /* Ensure opacity is set for the transition */
+  ul {
+    display: block; /* Change to block to allow submenu to be clickable */
+    transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    left: 100%;
+    opacity: 1;
+  }
 }
 
-.sideBarNav>ul>li>ul {
+.sideBarNav > ul > li > ul {
   position: absolute;
-  left: 50%;
+  left: 100%;
   top: 0;
-  display: none;
+  display: none; /* Keep this as none initially */
   opacity: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Set initial opacity for transition */
   transition: opacity 0.5s ease-in-out;
-  /* Added transition for opacity */
+}
+
+.sideBarNav  ul  li:hover > ul {
+  display: block; /* Show submenu on hover */
+  opacity: 1; /* Ensure opacity is set for the transition */
 }
 
 
