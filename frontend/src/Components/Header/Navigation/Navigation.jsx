@@ -1,20 +1,15 @@
 import { Button } from '@mui/material'
 import React from 'react'
-import { IoIosArrowDown, IoIosMenu } from 'react-icons/io'
+
 import { Link } from 'react-router-dom'
+import NavPart1 from './components/NavPart1'
 
 const Navigation = () => {
     return (
         <nav >
             <div className="container">
                 <div className="row align-items-center">
-                    <div className="col-sm-2 navPart1 align-items-center">
-                        <Button className='allCatTab'>
-                            <span className='icon1 me-2'><IoIosMenu /></span>
-                            <span className='allCatTabText text text-uppercase'>All Categories</span>
-                            <span className='icon2 ms-2'><IoIosArrowDown /></span>
-                        </Button>
-                    </div>
+                    <NavPart1 />
 
                     <div className="col-sm-10 navPart2 d-flex align-items-center justify-content-center">
                         <ul className='list list-inline d-flex ml-auto'>
